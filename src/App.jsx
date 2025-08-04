@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import CreateEvent from "./pages/CreateEvent";
 import ListEvents from "./pages/listEvents";
 import ListUsers from "./pages/listUsers";
 import Login from "./pages/Login";
@@ -28,8 +29,8 @@ function App() {
               <ProtectedRoute>
                 <ListUsers />
               </ProtectedRoute>
-            }
-          />
+            }/>
+            <Route path="/createEvent" element={<CreateEvent/>}/>
           <Route path="/proc" element={<ProtectedRoute />} />
         </Routes>
       </BrowserRouter>
